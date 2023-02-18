@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #123;
+}
+header {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  width: 100%;
+  position: fixed;
+  background-color: #123;
+  color: white;
+  top: 0px;
+  z-index: 10;
+}
+header nav input[type="text"] {
+  padding: 0.4rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+}
+
+.next,
+.privew {
+  position: fixed;
+  padding: 0.3rem;
+  padding-top: 0.4rem;
+  font-size: larger;
+  background: white;
+  color: #123;
+  top: 49vh;
+  margin: 0.5rem;
+  border: 1px solid #123;
+  border-radius: 3px;
+}
+.next {
+  right: 1px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.5rem;
+  padding: 0.5rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 5rem;
+}
+.card {
+  display: flex;
+  grid-column: span 2;
+  justify-content: space-around;
+  height: 220px;
+  background-color: rgba(41, 65, 88, 1);
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.card div {
+  width: 60%;
+  height: 100%;
+  padding: 5px;
+  position: relative;
+}
+.card img {
+  height: 100%;
+  width: 40%;
+  padding: 5px;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  object-fit: cover;
+}
+.card h1 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+.card h1 span {
+  color: darkorange;
+  margin-left: 0.8rem;
+}
+.card h3 {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #eeeeeed8;
+}
+.card h2 {
+  margin-top: 0.5rem;
+  font-size: 1.03rem;
+  color: #ffffffee;
+}
+.card a {
+  position: absolute;
+  bottom: 0.6rem;
+  font-size: 1.1rem;
+  color: rgb(136, 193, 247);
+}
+
+@media screen and (max-width: 1100px) {
+  .card a {
+    font-size: 0.95rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .card {
+    grid-column: span 3;
+  }
+}
+@media screen and (max-width: 650px) {
+  .card {
+    grid-column: span 6;
+  }
+}
